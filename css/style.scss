@@ -1,0 +1,12 @@
+@import 'variables'; 
+
+body {
+  background-color: $l_01;
+  color: $l_05; 
+  font-family: $font;
+}
+
+a {
+  color: $secondary;
+  text-decoration: none;
+}

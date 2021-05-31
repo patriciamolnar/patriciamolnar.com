@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'ModernSans-Light';
+  src: local('ModernSans-Light'), url('../fonts/ModernSans-Light.otf') format('opentype');
+}
+
+$font: 'ModernSans-Light';
+
+$l_01: hsl(0, 0%, 9%);
+$l_02: hsl(0, 0%, 13%);
+$l_03: hsl(0, 0%, 24%);
+$l_04: hsl(0, 0%, 67%);
+$l_05: hsl(0, 0%, 100%);
+
+$primary: hsl(144, 79%, 78%);
+$secondary: #ffc1f3;

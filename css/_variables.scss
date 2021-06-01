@@ -1,18 +1,14 @@
-@font-face {
-  font-family: 'ModernSans-Light';
-  src: local('ModernSans-Light'), url('../fonts/ModernSans-Light.otf') format('opentype');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap');
+
+$font: 'Poppins';
+
+$secondary: hsl(0, 0%, 0%); 
+$primary: #ff97af;
+
+$default: 2em;
+
+@mixin pad($n: $default) {
+  padding: $n;
 }
-
-$font: 'ModernSans-Light';
-
-$l_01: hsl(0, 0%, 9%);
-$l_02: hsl(0, 0%, 13%);
-$l_03: hsl(0, 0%, 24%);
-$l_04: hsl(0, 0%, 67%);
-$l_05: hsl(0, 0%, 100%);
-
-// $primary: hsl(144, 79%, 78%);
-$primary: hsl(2, 80%, 50%);
-$secondary: hsl(189, 53%, 56%);
 
 $shadow: 0 45px 35px -15px rgba(0, 0, 0, 0.25);

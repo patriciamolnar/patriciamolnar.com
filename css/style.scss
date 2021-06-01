@@ -5,38 +5,82 @@ html {
 }
 
 body {
-  font-size: calc(1.6rem + 1vw);
+  font-size: 1.6rem;
   font-family: $font;
-  background-color: $l_01;
-  color: $l_05; 
+  background-color: $secondary; 
+  color: lighten($secondary, 100%); 
 }
 
-section {
-  padding: 1em;
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+.button {
+  display: inline-block;
+  font-size: 1.6rem;
+  background-color: $primary;
+  color: $secondary;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  box-shadow: $shadow; 
+  font-weight: 500;
+  border-bottom: none; 
+
+  &::after {
+    content: ''; 
+    display: inline-block;
+    width: 0;
+    height: 0.4em; 
+    border-top: 3px solid black;
+    border-right: 3px solid black; 
+    margin-left: 3px;
+    margin-bottom: 1px;
+    transform: rotate(45deg) scaleX(0);
+    transform-style: preserve-3d;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:hover::after {
+    transform: rotate(45deg) scaleX(1);
+    width: 0.4em;
+    opacity: 1;
+  }
 }
 
 a {
-  color: $secondary;
+  color: $primary;
   text-decoration: none;
-  border-bottom: 1px solid $secondary;
+  border-bottom: 1px solid $primary;
 }
 
+::marker {
+  color: $primary; 
+}
+
+.primary {
+  color: $primary;
+}
+
+.underline {
+  color: lighten($secondary, 80%)
+}
+
+// Mobile Burger Navigation
 .header__flex {
   display: flex; 
   flex-direction: row;
   align-items: center;
 }
 
-h1 {
-  font-size: 1.6rem;
-}
-
-h3 {
-  margin: 0; 
-}
-
-
-// Mobile Burger Navigation
 #burger {
   display: inline-block;  
   position: relative; 
@@ -46,7 +90,7 @@ h3 {
   .bar1, .bar2, .bar3 {
     width: 2.5rem;
     height: 0.2rem;
-    background-color: $l_05;
+    background-color: lighten($secondary, 100%);
     margin: 0.6rem 0;
     transition: 0.3s;
     pointer-events: none;
@@ -60,6 +104,7 @@ h3 {
     .bar1 {
       -webkit-transform: rotate(-45deg) translate(-6px, 6px);
       transform: rotate(-45deg) translate(-5px, 6px);
+      background-color: $secondary;
     }
 
     .bar2 {
@@ -69,6 +114,7 @@ h3 {
     .bar3 {
       -webkit-transform: rotate(45deg) translate(-6px, -6px);
       transform: rotate(45deg) translate(-5px, -6px);
+      background-color: $secondary;
     }
   }
 }
@@ -78,7 +124,7 @@ h3 {
   top: 0;
   height: 0; 
   overflow: hidden; 
-  background-color: $l_01;
+  background-color: $primary;
   opacity: 0;
   transition: all 0.3s ease-in-out;
   z-index: 1;
@@ -97,87 +143,118 @@ h3 {
 
   a {
     display: block;
-    color: $l_05;
+    color: $secondary;
     text-decoration: none; 
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 4rem;
     padding: 0.5em;
   }
 }
 
 // Hero 
 .hero {
-  text-align: center; 
-  position: relative; 
-  padding-bottom: 3em;
-  text-shadow: 0 0 2x black;
-  height: calc(100vh - 10em);
+  @include pad(); 
 
-  &__background { 
-    position: absolute; 
-    left: 0; 
-    top: 0; 
-    height: 100%; 
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('https://images.pexels.com/photos/6100149/pexels-photo-6100149.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-    z-index: -1;
-    padding-bottom: 5em;
-    padding-top: 5em; 
-    margin-top: -5em;
-    opacity: 0.7;
+  p {
+    margin: 0;
   }
 
-  &__text {
-    text-align: center;
-    padding: 5em 1em 0;
+  &__name {
+    font-size: calc(2rem + 1vw);
+    font-weight: 600;
+  }
 
-    .hero__name {
-      font-size: calc(2rem + 2.5vw);
-      margin: 0; 
+  &__title {
+    text-transform: uppercase;
+    font-size: calc(4.5rem + 1vw);
+    font-weight: 800; 
+    padding: 0.1em 0;
+    
+    span:nth-of-type(1) {
+      color: $secondary;
+      text-shadow:
+      -1px -1px 0 lighten($secondary, 100%),  
+      1px -1px 0 lighten($secondary, 100%),
+      -1px 1px 0 lighten($secondary, 100%),
+      1px 1px 0 lighten($secondary, 100%);
     }
 
-    .hero__title {
-      margin: 0; 
-      font-size: calc(2rem + 3vw);
-      margin-top: 0.5em;
+    span:nth-of-type(3) {
+      color: $primary; 
     }
+  }
 
-    a {
-      display: inline-block;
-      background-color: $primary; 
-      border-bottom: none;
-      padding: 0.8em 1.5em; 
-      color: $l_05;
-      font-weight: 600;
-      letter-spacing: 1px;
-      margin-top: 0.5em
-    }
+  &__skills {
+    color: lighten($secondary, 90%);
+  }
+  a {
+    @extend .button; 
+    font-size: 1.8rem;
   }
 }
 
-#divider-1 {
-  fill: $l_01; 
-  margin-bottom: -1em;
+section {
+  @include pad();
+  margin: 1em 0;
 }
 
 .portfolio {
-  background-color: $l_01; 
+  background-color: lighten($secondary, 6%); 
 
-  &__grid {
+  .grid {
     display: grid; 
     grid-template-columns: 1fr;
-    grid-gap: 1em;
-  }
+    grid-gap: $default;
 
-  &__card {
-    background-color: $l_02;
-    padding: 1em;
-    box-shadow: $shadow;
+    &__card {
+      background-color: lighten($secondary, 10%);
+      box-shadow: $shadow;
+    }  
 
-    h4 {
-      margin: 0;
+    &__video {
+      position: relative;
+      padding-bottom: 56.25%;
+    
+      iframe {
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      } 
+    }
+
+    &__copy {
+      @include pad();
+    }
+
+    &__title {
+      color: $primary;
+    }
+
+    &__desc {
+      color: lighten($secondary, 85%);
     }
   }
+
+  
+
+  
+
+}
+
+.about {
+  @extend .portfolio; 
+}
+
+footer {
+  @include pad(); 
+  font-size: 1.2rem;
+}
+
+svg {
+  fill: $primary; 
+  display: inline; 
+  width: 2.4rem; 
+  height: 2.4rem;
 }

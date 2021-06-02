@@ -1,0 +1,23 @@
+{
+  "name": "pm.com",
+  "version": "1.0.0",
+  "description": "Patricia Molnar's portfolio site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patriciamolnar/patriciamolnar.com.git"
+  },
+  "author": "Patricia Molnar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patriciamolnar/patriciamolnar.com/issues"
+  },
+  "homepage": "https://github.com/patriciamolnar/patriciamolnar.com#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

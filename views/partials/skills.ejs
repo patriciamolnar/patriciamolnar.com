@@ -1,53 +1,16 @@
-<section id="skills">
-  <h3>Skills<span class="primary">.</span></h3>
-  
-  <div class="skills__grid">
-    <p>
-      Frontend
-      <ul>
-        <li>HTML5</li>
-        <li>CSS and SASS</li>
-        <li>(Vanilla) JavaScript</li>
-        <li>React</li>
-        <li>jQuery</li>
-        <li>Responsive Webdesign (Mobile-first design)</li>
-      </ul>
-    </p>
-
-    <p>
-      Backend
-      <ul>
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PHP</li>
-      </ul>
-    </p>
-
-    <p>
-      Databases
-      <ul>
-        <li>MongoDB</li>
-        <li>mySQL</li>
-      </ul>
-    </p>
-
-    <p>
-      Other
-      <ul>
-        <li>WordPress</li>
-        <li>Git & GitHub</li>
-        <li>Gulp</li>
-        <li>Figma</li>
-        <li>npm</li>
-      </ul>
-    </p>
-  </div>
-
-  <p>
-    Non-Coding Skills
-    <ul>
-      <li>Project Management</li>
-      <li>Leading a team of 15 customer service agents</li>
-    </ul>
-  </p>
-</section>
+<% if(data.skills) { %> 
+  <section id="skills">
+    <h3>Skills<span class="primary">.</span></h3>
+    
+    <div class="skills__grid">
+      <% for(let criteria in data.skills) { %>
+        <p><%= criteria.charAt(0).toUpperCase() + criteria.slice(1); %></p>
+        <ul>
+          <% data.skills[criteria].forEach(skill => { %>
+            <li><%= skill %></li>
+          <% }); %><%# end forEach %> 
+        </ul>
+      <% } %><%# end for in %>
+    </div>
+  </section>
+<% } %><%# end if %>

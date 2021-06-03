@@ -28,5 +28,37 @@
       "github_url": "https://github.com/patriciamolnar/nasa-api",
       "live_url": "http://pm-nasa-api.herokuapp.com/"
     }
-  ]
+  ], 
+  "skills": {
+    "frontend": [
+      "HTML5",
+      "CSS & SASS", 
+      "(Vanilla) JavaScript", 
+      "React", 
+      "EJS", 
+      "jQuery", 
+      "Responsive Webdesign (Mobile-first design)"
+    ], 
+    "backend": [
+      "Node", 
+      "Express", 
+      "PHP"
+    ], 
+    "database": [
+      "mySQL",
+      "MongoDB"
+    ], 
+    "other": [
+      "WordPress",
+      "Git & Github",
+      "Gulp",
+      "Figma & Photoshop",
+      "npm"
+    ],
+    "non-coding": [
+      "Project management",
+      "Leadership",
+      "Copywriting"
+    ]
+  }
 }

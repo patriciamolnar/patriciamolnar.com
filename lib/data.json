@@ -1,0 +1,32 @@
+{
+  "portfolio": [
+    {
+      "video_url": "https://www.youtube.com/embed/lNvBbh5jDcA",
+      "title": "French Learning App",
+      "stack": "React, Node, Express & MongoDB",
+      "purpose": "To help people studying French learn the different conjugation forms of most common French words.",
+      "features": [
+        "Let's users practice French verb forms with flashcards and tests",
+        "Users can create an account and bookmark difficult words",
+        "List of all the forms for each verb",
+        "Users can change their email address, password or delete their account under settings",
+        "Password reset system for users who forget their login"
+      ], 
+      "github_url": "https://github.com/patriciamolnar/conjugateau",
+      "live_url": "#"
+    }, 
+    {
+      "video_url": "https://www.youtube.com/embed/lNvBbh5jDcA",
+      "title": "Asteroid Tracker",
+      "stack": "Node, Express for backend, Vanilla JavaScript, CSS and HTML for frontend",
+      "purpose": "See how many Nearth Earth Objects (NEOs) are orbiting the Earth.",
+      "features": [
+        "Let's users check the number of NEOs for a specified day",
+        "Provides more information about the NEO, e.g. size, speed and whether it is potentially dangerous",
+        "Custom error message illustrations, e.g. if there are no NEOs or user input incorrect date format"
+      ], 
+      "github_url": "https://github.com/patriciamolnar/nasa-api",
+      "live_url": "http://pm-nasa-api.herokuapp.com/"
+    }
+  ]
+}

@@ -1,54 +1,36 @@
-<section id="portfolio" class="portfolio">
-  <h3 class="heading">Portfolio<span class="primary">.</span></h3>
-  <div class="grid">
-    <div class="grid__card">
-      <div class="grid__video">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lNvBbh5jDcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-
-      <div class="grid__copy">
-        <h4 class="grid__title">French Learning App</h4>
-        <p>
-          <span class="underline">Stack used:</span> React, Node, Express & MongoDB
-        </p>
-        <p>
-          <span class="underline">Purpose:</span> To help people studying French learn the different conjugation forms of most common French words
-        </p>
-        <p>
-          <span class="underline">Key features:</span>
-          <ul>
-            <li>Let's users practice French verb forms with flashcards and tests</li>
-            <li>Users can create an account and bookmark difficult words</li>
-            <li>List of all the forms for each verb</li>
-            <li>Users can change their email address, password or delete their account under settings</li>
-            <li>Password reset system for users who forget their login</li>
-          </ul>
-        </p>
-        <a href="#" class="button">View Web App</a>
-        <a href="#" class="button">View Source Code</a>
-      </div>
+<% if(data.portfolio) { %>
+  <section id="portfolio" class="portfolio">
+    <h3 class="heading">Portfolio<span class="primary">.</span></h3>
+    <div class="grid">
+      <% data.portfolio.forEach(project => { %>
+        <div class="grid__card">
+          <div class="grid__video">
+            <iframe width="100%" height="100%" src=<%= project.video_url %> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+  
+          <div class="grid__copy">
+            <h4 class="grid__title"><%= project.title %></h4>
+            <p>
+              <span class="underline">Stack used:</span> 
+              <%= project.stack %>
+            </p>
+            <p>
+              <span class="underline">Purpose:</span>
+              <%= project.purpose %> 
+            </p>
+            <p>
+              <span class="underline">Key features:</span>
+              <ul>
+                <% project.features.forEach(feature => { %>
+                  <li><%= feature %></li>
+                <% })%>
+              </ul>
+            </p>
+            <a href=<%= project.live_url %> class="button">View Web App</a>
+            <a href=<%= project.github_url %> class="button">Source Code</a>
+          </div>
+        </div>
+      <% }); %>
     </div>
-
-    <div class="grid__card">
-      <div class="grid__video">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lNvBbh5jDcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-
-      <div class="grid__copy">
-        <h4 class="grid__title">Asteroid Tracker</h4>
-        <p><span class="underline">Stack used:</span> Node, Express for backend, Vanilla JavaScript, CSS and HTML for frontend</p>
-        <p><span class="underline">Purpose:</span> See how many Nearth Earth Objects (NEOs) are orbiting the Earth</p>
-        <p>
-          <span class="underline">Key features:</span>
-          <ul>
-            <li>Let's users check the number of NEOs for a specified day</li>
-            <li>Provides more information about the NEO, e.g. size, speed and whether it is potentially dangerous</li>
-            <li>Custom error message illustrations, e.g. if there are no NEOs or user input incorrect date format</li>
-          </ul>
-        </p>
-        <a href="#" class="button">View Web App</a>
-        <a href="#" class="button">View Source Code</a>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+<% } %>

@@ -78,7 +78,15 @@ a {
 }
 
 .social-media {
+  svg {
+    fill: $primary; 
+    display: inline; 
+    width: 2.4rem; 
+    height: 2.4rem;
+  }
+
   a {
     border-bottom: none; 
   } 
 }
+

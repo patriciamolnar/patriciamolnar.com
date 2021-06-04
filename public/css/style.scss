@@ -4,18 +4,52 @@
 @import 'header';
 @import 'portfolio';
 
+//skills 
+.skills__list {
+  color: lighten($secondary, 80%);
+}
+
+//About
 .about {
   @extend .portfolio; 
 }
 
+//Contact 
+#contact-button {
+  border-bottom: none;
+  background-color: $primary;
+  display: inline-block; 
+  border-radius: 50%;
+  box-shadow: $shadow;
+
+  position: fixed; 
+  right: 1em; 
+  bottom: 1em; 
+
+  svg {
+    fill: $secondary; 
+    width: 24px; 
+    height: 24px;
+    padding: 0.5em 0.5em 0.3em;     
+  } 
+}
+
+//Footer
 footer {
   @include pad(); 
   font-size: 1.2rem;
-}
+  @extend .social-media; 
+  margin-bottom: -3rem;
+  background-color: lighten($secondary, 5%);
 
-svg {
-  fill: $primary; 
-  display: inline; 
-  width: 2.4rem; 
-  height: 2.4rem;
+  .contact-details {
+    span {
+      display: flex; 
+      align-items: center;
+    }
+
+    a {
+      border-bottom: 1px solid $primary; 
+    }
+  }
 }

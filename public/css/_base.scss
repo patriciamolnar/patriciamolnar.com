@@ -1,0 +1,84 @@
+html {
+  font-size: 62.5%
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font;
+  background-color: $secondary; 
+  color: lighten($secondary, 100%); 
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+section {
+  @include pad();
+  margin: 1em 0;
+}
+
+.button {
+  display: inline-block;
+  font-size: 1.6rem;
+  background-color: $primary;
+  color: $secondary;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  box-shadow: $shadow; 
+  font-weight: 500;
+  border-bottom: none; 
+
+  &::after {
+    content: ''; 
+    display: inline-block;
+    width: 0;
+    height: 0.4em; 
+    border-top: 3px solid black;
+    border-right: 3px solid black; 
+    margin-left: 3px;
+    margin-bottom: 1px;
+    transform: rotate(45deg) scaleX(0);
+    transform-style: preserve-3d;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:hover::after {
+    transform: rotate(45deg) scaleX(1);
+    width: 0.4em;
+    opacity: 1;
+  }
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  border-bottom: 1px solid $primary;
+}
+
+::marker {
+  color: $primary; 
+}
+
+.primary {
+  color: $primary;
+}
+
+.underline {
+  color: lighten($secondary, 80%)
+}
+
+.social-media {
+  a {
+    border-bottom: none; 
+  } 
+}

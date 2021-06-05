@@ -3,10 +3,17 @@
 @import 'base';
 @import 'header';
 @import 'portfolio';
+@import 'certificates';
 
 //skills 
 .skills__list {
-  color: lighten($secondary, 80%);
+  color: lighten($secondary, 90%);
+  list-style-type: none;
+  padding: 0; 
+}
+
+.skills__lang {
+  @extend .certificates__lang; 
 }
 
 //About

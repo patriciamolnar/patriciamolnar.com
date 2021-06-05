@@ -35,4 +35,22 @@ window.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('show');
   }));
 
+
+  //expand certificates
+  const toggleVisibility = (e) => {
+    const parent = e.target.parentElement;
+    const btn = e.target;
+    if(parent.classList.contains('appear')) {
+        parent.classList.remove('appear');
+        btn.textContent = '+'; 
+    } else {
+        parent.classList.add('appear');
+        btn.textContent = '-'; 
+    }
+  }
+  const toggleBtns = document.querySelectorAll('.certificates__toggle');
+  toggleBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => toggleVisibility(e))
+  }); 
+
 });

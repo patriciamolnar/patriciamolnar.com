@@ -1,0 +1,40 @@
+#certificates {
+  margin-top: -3em;
+}
+
+.certificates__grid {
+  div {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.certificates__toggle {
+  background: $primary;
+  border: none; 
+  margin-right: 0.5em;
+  width: 2em;
+  height: 2em;
+}
+
+.certificates__lang {
+  font-weight: 600;
+}
+
+.certificates__list {
+  display: none; 
+  list-style-type: none;
+  padding-left: 0; 
+  li {
+    margin: 5px 0; 
+  }
+
+  .appear & {
+    display: block;
+  }
+
+  .certificates__provider {
+    color: lighten($secondary, 80%);
+    font-style: italic; 
+    font-size: 0.9em; 
+  }
+}

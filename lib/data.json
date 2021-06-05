@@ -76,5 +76,70 @@
       "demo_url": "https://codepen.io/patriciamolnar/full/gOweaxa",
       "code_url": "https://github.com/patriciamolnar/glassmorphism"
     }
-  ]
+  ], 
+  "certificates": {
+    "HTML & CSS": [
+      ["FreeCodeCamp", "Responsive Web Design"], 
+      ["LinkedIn Learning", "Sass Essential Training"], 
+      ["LinkedIn Learning", "CSS: Enhancing Interfaces with Animations"] 
+    ], 
+    "JavaScript": [
+      ["LinkedIn Learning", "Ethical Hacking with JavaScript"], 
+      ["LinkedIn Learning", "Vanilla JavaScript: Ajax and Fetch"], 
+      ["LinkedIn Learning", "Vanilla JavaScript: Animations"]
+    ], 
+    "React.js": [
+      ["LinkedIn Learning", "React.js Essential Training"],
+      ["LinkedIn Learning", "React Hooks"],
+      ["LinkedIn Learning", "React Working with APIs"],
+      ["LinkedIn Learning", "React.js: Building an Interface"], 
+      ["LinkedIn Learning", "React: Creating and Hosting a Full-Stack Website"],
+      ["LinkedIn Learning", "React Securing Applications"],
+      ["LinkedIn Learning", "React Ecosystems"]
+    ], 
+    "Node & Express": [
+      ["LinkedIn Learning", "Advanced Node.js"],
+      ["LinkedIn Learning", "Building RESTful APIs with Node.js and Express"], 
+      ["LinkedIn Learning", "Express Essential Training"], 
+      ["LinkedIn Learning", "Node.js Essential Training"]
+    ], 
+    "MongoDB": [
+      ["LinkedIn Learning", "Learning MongoDB"]
+    ], 
+    "SQL": [
+      ["LinkedIn Learning", "MySQL Essential Training"], 
+      ["LinkedIn Learning", "SQL Essential Training"]
+    ], 
+    "PHP": [
+      ["LinkedIn Learning", "PHP Creating Secure Websites"], 
+      ["LinkedIn Learning", "PHP: Accessing Databases with PDO and MySQLi"],
+      ["LinkedIn Learning", "PHP: Object Oriented Programming"],
+      ["LinkedIn Learning", "Ajax and PHP: Add Dynamic Content to Websites"], 
+      ["LinkedIn Learning", "PHP: Clean URLs on Apache Server"], 
+      ["LinkedIn Learning", "Learning PHP"]
+    ], 
+    "WordPress": [
+      ["LinkedIn Learning", "WordPress: Action and Filter Hooks"],
+      ["LinkedIn Learning", "Custom Post Types and Taxonomies"],
+      ["LinkedIn Learning", "WordPress: Developing Secure Websites"],
+      ["LinkedIn Learning", "WordPress: Internationalization"], 
+      ["LinkedIn Learning", "WordPress Accessibility"], 
+      ["LinkedIn Learning", "WordPress: Building Child Themes"], 
+      ["LinkedIn Learning", "WordPress 5 Essential Training"], 
+      ["LinkedIn Learning", "WordPress 5 Essential Training: Site Administration"],
+      ["LinkedIn Learning", "WordPress Workflows"]
+    ], 
+    "Other": [
+      ["LinkedIn Learning", "Programming Foundations: Web Security"],
+      ["LinkedIn Learning", "HTTP Essential Training"],
+      ["LinkedIn Learning", "Learning REST APIs"],
+      ["LinkedIn Learning", "SSL Certificates for Web Developers"],
+      ["LinkedIn Learning", "Git Branches, Merges and Remotes"],
+      ["LinkedIn Learning", "Git Essential Training"],
+      ["LinkedIn Learning", "PHP: Object Oriented Programming"],
+      ["LinkedIn Learning", "Figma for UX Design"],
+      ["LinkedIn Learning", "Figma: Handing off to Developers"], 
+      ["LinkedIn Learning", "Figma: Working with Clients"]
+    ]
+  }
 }

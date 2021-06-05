@@ -1,3 +1,21 @@
 <section id="certificates">
   <h3>Certificates<span class="primary">.</span></h3>
+  <p>
+    I am a self-taught web developer, who acquired her knowledge by taking courses on LinkedIn Learning, watching YouTube videos, reading books and newsletters, listening to podcasts and of course by building projects.
+  </p>
+
+  <p>Below you can see a list of the certificates I earned</p>
+
+  <div class="certificates__grid">
+    <% for(let language in data.certificates) { %>
+      <div>
+        <button class="certificates__toggle">+</button><span class="certificates__lang"><%= language %></span>
+        <ul class="certificates__list">
+          <% data.certificates[language].forEach(certificate => { %>
+            <li><%= certificate[1]  %> <span class="certificates__provider"><%= certificate[0]  %></span></li>
+          <% }); %><%# end forEach %> 
+        </ul>
+      </div>
+    <% } %><%# end for in %>
+  </div>
 </section>

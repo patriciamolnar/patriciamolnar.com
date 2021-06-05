@@ -4,7 +4,7 @@
     
     <div class="skills__grid">
       <% for(let criteria in data.skills) { %>
-        <p><%= criteria.charAt(0).toUpperCase() + criteria.slice(1); %></p>
+        <p class="skills__lang"><%= criteria.charAt(0).toUpperCase() + criteria.slice(1); %></p>
         <ul class="skills__list">
           <% data.skills[criteria].forEach(skill => { %>
             <li><%= skill %></li>

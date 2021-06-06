@@ -23,7 +23,6 @@ h4 {
 
 section {
   @include pad();
-  margin: 1em 0;
 }
 
 .button {
@@ -36,26 +35,21 @@ section {
   box-shadow: $shadow; 
   font-weight: 500;
   border-bottom: none; 
+  position: relative;
 
   &::after {
     content: ''; 
-    display: inline-block;
-    width: 0;
-    height: 0.4em; 
-    border-top: 3px solid black;
-    border-right: 3px solid black; 
-    margin-left: 3px;
-    margin-bottom: 1px;
-    transform: rotate(45deg) scaleX(0);
-    transform-style: preserve-3d;
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
+    position: absolute; 
+    inset: 0 0 0 0; 
+    background-color: adjust-color($secondary, $alpha: -0.8);
+    transform: scaleX(0); 
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out; 
   }
 
   &:hover::after {
-    transform: rotate(45deg) scaleX(1);
-    width: 0.4em;
-    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
   }
 }
 

@@ -53,4 +53,41 @@ window.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', (e) => toggleVisibility(e))
   }); 
 
+  // intersection observer 
+  const options = {
+    threshold: 0, 
+    rootMargin: '0px 0px -100px 0px'
+  }; 
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if(!entry.isIntersecting) {
+            return;
+          } else {
+            entry.target.classList.add('appear');
+            observer.unobserve(entry.target); 
+          }
+      })
+  });
+
+  
+  //add delay to transition
+  const addDelay = (eles) => {
+    let num = eles.length; 
+    let delay = 0;  
+    while(num > 0) {
+        eles[eles.length - num].style.transitionDelay = delay + 's'; 
+        num--; 
+        delay += 0.3; 
+    } 
+  }
+
+  const eles = document.querySelectorAll('.transition'); 
+  addDelay(eles);
+  eles.forEach(ele => observer.observe(ele));
+
+  const heroBtn = document.querySelector('.hero__text a');
+  observer.observe(heroBtn);
+
+  
 });

@@ -1,3 +1,15 @@
 @mixin pad($n: $default) {
   padding: $n;
 }
+
+@mixin divider($c: $secondary, $m: -0.5em) {
+  fill: $c; 
+  margin-bottom: $m;
+}
+
+@mixin bg($url, $p: center) {
+  background-image: url($url); 
+  background-position: $p;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,22 @@
+footer {
+  @extend .social-media; 
+  @include pad(); 
+  background-color: lighten($secondary, 5%);
+  @include bg('https://images.pexels.com/photos/1414706/pexels-photo-1414706.png?auto=compress&cs=tinysrgb&dpr=1&w=500', top left);
+
+  font-size: 1.2rem;
+  padding-top: 4em; 
+  margin-bottom: -3rem;
+  margin-top: -3em;
+
+  .contact-details {
+    span {
+      display: flex; 
+      align-items: center;
+    }
+
+    a {
+      border-bottom: 1px solid $primary; 
+    }
+  }
+}

@@ -93,6 +93,17 @@ a {
   } 
 }
 
+//Page Dividers
+.divider {
+  &.light {
+    @include divider(lighten($secondary, 6%));
+  }
+
+  &.dark {
+    @include divider($secondary);
+  }
+}
+
 //Intersection Observer rules
 .transition {
   opacity: 0;  

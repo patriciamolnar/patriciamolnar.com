@@ -4,12 +4,14 @@
     
     <div class="skills__grid">
       <% for(let criteria in data.skills) { %>
-        <p class="skills__lang"><%= criteria.charAt(0).toUpperCase() + criteria.slice(1); %></p>
-        <ul class="skills__list">
-          <% data.skills[criteria].forEach(skill => { %>
-            <li><%= skill %></li>
-          <% }); %><%# end forEach %> 
-        </ul>
+        <div class="skills__card">
+          <p class="skills__lang"><%= criteria.charAt(0).toUpperCase() + criteria.slice(1); %></p>
+          <ul class="skills__list">
+            <% data.skills[criteria].forEach(skill => { %>
+              <li><%= skill %></li> 
+            <% }); %><%# end forEach %> 
+          </ul>
+        </div>
       <% } %><%# end for in %>
     </div>
   </section>

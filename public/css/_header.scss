@@ -166,18 +166,6 @@
         transition-delay: 1s;
       }
     }
-
-    //Intersection Observer rules
-    .transition {
-      opacity: 0;  
-      transform: translateY(2rem);
-      transition: opacity 1s ease-out, transform 1s ease-out; 
-
-      &.appear {
-        opacity: 1; 
-        transform: translateY(0);
-      }
-    }
   }
 }
 

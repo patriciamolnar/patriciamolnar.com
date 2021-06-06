@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // intersection observer 
   const options = {
     threshold: 0, 
-    rootMargin: '0px 0px -100px 0px'
+    rootMargin: '0px 0px -200px 0px'
   }; 
 
   const observer = new IntersectionObserver((entries, observer) => {
@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
             observer.unobserve(entry.target); 
           }
       })
-  });
+  }, options);
 
   
   //add delay to transition
@@ -82,6 +82,11 @@ window.addEventListener('DOMContentLoaded', () => {
     } 
   }
 
+  //Headlines
+  const h3s = document.querySelectorAll('h3');
+  h3s.forEach(ele => observer.observe(ele));
+
+  //Hero Section
   const eles = document.querySelectorAll('.transition'); 
   addDelay(eles);
   eles.forEach(ele => observer.observe(ele));
@@ -89,5 +94,25 @@ window.addEventListener('DOMContentLoaded', () => {
   const heroBtn = document.querySelector('.hero__text a');
   observer.observe(heroBtn);
 
-  
+  //Portfolio & About
+  const gridCards = document.querySelectorAll('.grid__card'); 
+  gridCards.forEach(ele => observer.observe(ele));
+
+  //Skills  
+  const skills = document.querySelectorAll('.skills__card');
+  skills.forEach(ele => observer.observe(ele));
+
+  //Certificates
+  const certificates = document.querySelectorAll('#certificates > p');
+  certificates.forEach(ele => observer.observe(ele));
+
+  const about = document.querySelectorAll('#about > p');
+  about.forEach(ele => observer.observe(ele));
+
+  const contact = document.querySelectorAll('#contact > p');
+  contact.forEach(ele => observer.observe(ele));
+
+  const contactLink = document.querySelector('#contact__link');
+  observer.observe(contactLink);
+
 });

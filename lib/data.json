@@ -65,16 +65,30 @@
     {
       "youtube_url": "https://youtube.com/embed/Ws5GFMeRye4", 
       "title": "Interactive CSS background animation",
-      "description": "Using only HTML and CSS, create an animated background",
-      "demo_url": "https://codepen.io/patriciamolnar/pen/poEaGdy",
+      "description": "Using HTML and CSS, in this video I show how to create an interactive background when the user hovers over the area. To achieve this, I use CSS animations, including the properties 'animation-play-state', 'animation-fill-mode' and 'animation-timing-function'.",
+      "demo_url": "https://codepen.io/patriciamolnar/full/poEaGdy",
       "code_url": "https://github.com/patriciamolnar/css-background-animation"
     },
     {
       "youtube_url": "https://youtube.com/embed/Tkph7eiceQE", 
       "title": "Glassmorphism tutorial",
-      "description": "Explaining how to create the Glassmorphism effect",
+      "description": "This video shoes how to create the Frosted Glass effect, also known as Glassmorphism, with CSS.",
       "demo_url": "https://codepen.io/patriciamolnar/full/gOweaxa",
       "code_url": "https://github.com/patriciamolnar/glassmorphism"
+    },
+    {
+      "youtube_url": "https://youtube.com/embed/B7laJa9KUaI", 
+      "title": "Create Animated Underlines with the Intersection Observer API",
+      "description": "Animations are a great way to enhance your website. In this video, I explain how to use the JavaScript Intersection API to add animated underlines to your website when the user scrolls down the page.",
+      "demo_url": "https://codepen.io/patriciamolnar/full/LYZgJPE",
+      "code_url": "https://github.com/patriciamolnar/animated-underline-intersection-observer"
+    }, 
+    {
+      "youtube_url": "https://youtube.com/embed/-S21wVY07AY", 
+      "title": "Transitioning CSS gradients",
+      "description": "You can create gradients easily with the background-image: linear-gradient() property. This can however not be transitioned. This tutorial explains how you can nonetheless create buttons and links that have a transitioning gradient.",
+      "demo_url": "https://codepen.io/patriciamolnar/full/mdrQjwW",
+      "code_url": "https://github.com/patriciamolnar/css-gradient-transitions"
     }
   ], 
   "certificates": {

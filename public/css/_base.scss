@@ -4,6 +4,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  line-height: 1.6; 
   font-family: $font;
   background-color: $secondary; 
   color: lighten($secondary, 100%); 
@@ -78,6 +79,10 @@ a {
 
 .underline {
   color: lighten($secondary, 80%)
+}
+
+.bold {
+  font-weight: 500;
 }
 
 .social-media {

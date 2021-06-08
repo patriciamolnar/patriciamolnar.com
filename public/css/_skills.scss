@@ -14,3 +14,34 @@
     margin-top: 0; 
   }
 }
+
+
+@media screen and (min-width: 50em) {
+  .skills__grid {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'frontend backend database' 'frontend other noncode';
+    gap: 2em;
+    
+    .skills__card:nth-of-type(1) {
+      grid-area: frontend;
+    }
+
+    .skills__card:nth-of-type(2) {
+      grid-area: backend;
+    }
+
+    .skills__card:nth-of-type(3) {
+      grid-area: database;
+    }
+
+    .skills__card:nth-of-type(4) {
+      grid-area: other;
+    }
+
+    .skills__card:nth-of-type(5) {
+      grid-area: noncode;
+    }
+
+  }
+}

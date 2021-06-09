@@ -15,6 +15,8 @@
       background-color: lighten($secondary, 10%);
       box-shadow: $shadow;
       overflow-x: hidden;
+      position: relative;
+      padding-bottom: 3em;
 
       //Intersection Observer Rules
       opacity: 0;  
@@ -50,7 +52,17 @@
     }
 
     &__copy {
-      @include pad();
+      @include pad(); 
+
+      & > div:nth-of-type(2) {
+        position: absolute; 
+        bottom: 2em; 
+        left: 2em;
+
+        .button {
+          margin-right: 0.5em;
+        }
+      }
     }
 
     &__title {

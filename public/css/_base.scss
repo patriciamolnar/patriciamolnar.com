@@ -120,3 +120,9 @@ a {
     transform: translateY(0);
   }
 }
+
+@media screen and (min-width: 64em) {
+  section {
+    @include pad(2em, 6em, 2em, 6em);
+  }
+}

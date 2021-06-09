@@ -9,25 +9,29 @@
           </div>
   
           <div class="grid__copy">
-            <h4 class="grid__title"><%= project.title %></h4>
-            <p>
-              <span class="underline">Stack used:</span> 
-              <%= project.stack %>
-            </p>
-            <p>
-              <span class="underline">Purpose:</span>
-              <%= project.purpose %> 
-            </p>
-            <p>
-              <span class="underline">Key features:</span>
-              <ul>
-                <% project.features.forEach(feature => { %>
-                  <li><%= feature %></li>
-                <% })%>
-              </ul>
-            </p>
-            <a href=<%= project.live_url %> class="button">View Web App</a>
-            <a href=<%= project.github_url %> class="button">Source Code</a>
+            <div>
+              <h4 class="grid__title"><%= project.title %></h4>
+              <p>
+                <span class="underline">Stack used:</span> 
+                <%= project.stack %>
+              </p>
+              <p>
+                <span class="underline">Purpose:</span>
+                <%= project.purpose %> 
+              </p>
+              <p>
+                <span class="underline">Key features:</span>
+                <ul>
+                  <% project.features.forEach(feature => { %>
+                    <li><%= feature %></li>
+                  <% })%>
+                </ul>
+              </p>
+            </div>
+            <div>
+              <a href=<%= project.live_url %> class="button">View Web App</a>
+              <a href=<%= project.github_url %> class="button">Source Code</a>
+            </div>
           </div>
         </div>
       <% }); %>

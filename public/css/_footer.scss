@@ -30,3 +30,16 @@ footer {
     }
   }
 }
+
+@media screen and (min-width: 50em) {
+  footer {
+    margin-top: -5em;
+    @include pad(8em, 6em, 2em, 6em);
+
+    .social-media {
+      position: absolute; 
+      right: 6em; 
+      bottom: 2em;
+    }
+  }
+}

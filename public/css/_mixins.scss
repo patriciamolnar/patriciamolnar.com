@@ -1,10 +1,17 @@
-@mixin pad($n: $default) {
-  padding: $n;
+@mixin pad($top: $default, $right: $default, $bottom: $default, $left: $default) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
 }
 
 @mixin divider($c: $secondary, $m: -0.5em) {
   fill: $c; 
   margin-bottom: $m;
+
+  @media (min-width: 50em) {
+    margin-bottom: -1.5em;
+  }
 }
 
 @mixin bg($url, $p: center) {

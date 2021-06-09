@@ -19,21 +19,41 @@
 }
 
 #contact-button {
-  border-bottom: none;
-  background-color: $primary;
-  display: inline-block; 
-  border-radius: 50%;
-  box-shadow: $shadow;
+  // @extend .button; 
+  background-color: $primary; 
+  padding: 0.4em 4em 0.4em 0.5em;
+  line-height: 0.6; 
 
   position: fixed; 
-  right: 1em; 
+  right: -3.5em; 
   bottom: 1em; 
+  transition: right 0.6s ease-in-out;
+
+  &:hover {
+    right: 0; 
+  }
+
+  &::before {
+    content: 'Hello!';
+    font-weight: 500;
+    font-family: $font;
+    position: absolute; 
+    color: $secondary; 
+    right: 0.5em; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    opacity: 0; 
+    transition: opacity 0.6s ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1; 
+  }
 
   svg {
     fill: $secondary; 
     width: 24px; 
     height: 24px;
-    padding: 0.5em 0.5em 0.3em;     
   } 
 }
 

@@ -23,6 +23,7 @@
   background-color: $primary; 
   padding: 0.4em 4em 0.4em 0.5em;
   line-height: 0.6; 
+  border-bottom: none;
 
   position: fixed; 
   right: -3.5em; 
@@ -31,6 +32,7 @@
 
   &:hover {
     right: 0; 
+    border-bottom: none;
   }
 
   &::before {

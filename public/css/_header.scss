@@ -262,6 +262,25 @@
         font-weight: 600;
         font-size: calc(1rem + 1vw);
         padding: 0.5em;
+        position: relative;
+      }
+
+      a::after {
+        content: '';
+        position: absolute; 
+        bottom: 0.5em; 
+        left: 0; 
+        height: 2px; 
+        width: 100%; 
+        background-color: $primary;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      a:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
       }
   }
 

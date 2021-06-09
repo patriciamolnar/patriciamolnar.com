@@ -35,6 +35,10 @@ section {
   @include pad();
 }
 
+button {
+  cursor: pointer;
+}
+
 .button {
   display: inline-block;
   font-size: 1.6rem;

@@ -148,6 +148,15 @@ a {
         border-radius: 50%; 
       }
     }
+
+    &:focus:not(:focus-visible) {
+      border-bottom: none; 
+
+      svg {
+        fill: $primary; 
+        box-shadow: none;  
+      }
+    }
   } 
 }
 

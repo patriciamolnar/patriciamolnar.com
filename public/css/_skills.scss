@@ -46,3 +46,20 @@
 
   }
 }
+
+
+@media screen and (min-width: 90em) {
+  .skills {
+    padding-top: 6em;
+
+    &__list {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 120em) {
+  .skills {
+    padding-top: 8em;
+  }
+}

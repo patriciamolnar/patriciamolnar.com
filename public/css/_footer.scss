@@ -39,3 +39,28 @@ footer {
     }
   }
 }
+
+
+@media screen and (min-width: 90em) {
+  footer {
+    margin-top: -7em;
+    @include pad(12em, 10em, 4em, 10em);
+
+    .social-media {
+      right: 10em; 
+      bottom: 4em;
+    }
+  }
+}
+
+@media screen and (min-width: 120em) {
+  footer {
+    margin-top: -7em;
+    @include pad(14em, 15em, 4em, 15em);
+
+    .social-media { 
+      right: 15em; 
+      bottom: 4em;
+    }
+  }
+}

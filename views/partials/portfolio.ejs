@@ -12,15 +12,15 @@
             <div>
               <h4 class="grid__title"><%= project.title %></h4>
               <p>
-                <span class="underline">Stack used:</span> 
+                <span class="diff">Stack used:</span> 
                 <%= project.stack %>
               </p>
               <p>
-                <span class="underline">Purpose:</span>
+                <span class="diff">Purpose:</span>
                 <%= project.purpose %> 
               </p>
               <p>
-                <span class="underline">Key features:</span>
+                <span class="diff">Key features:</span>
                 <ul>
                   <% project.features.forEach(feature => { %>
                     <li><%= feature %></li>

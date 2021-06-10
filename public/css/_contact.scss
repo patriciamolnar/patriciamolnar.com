@@ -19,7 +19,6 @@
 }
 
 #contact-button {
-  // @extend .button; 
   background-color: $primary; 
   padding: 0.4em 4em 0.4em 0.5em;
   line-height: 0.6; 
@@ -35,6 +34,16 @@
     border-bottom: none;
   }
 
+  &:focus {
+    outline: none; 
+    background-color: $contrast; 
+    right: 0; 
+  }
+
+  &:focus:not(:focus-visible) {
+    background-color: $primary;
+  }
+
   &::before {
     content: 'Hello!';
     font-weight: 500;
@@ -48,7 +57,8 @@
     transition: opacity 0.6s ease-in-out;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     opacity: 1; 
   }
 

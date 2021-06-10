@@ -73,6 +73,27 @@
     font-size: calc(1rem + 5vw);
     padding: 0.5em;
     border-bottom: none;
+
+    //Focus rule for keyboard nav
+    &:focus {
+      outline: none; 
+      color: $contrast; 
+    
+      &::after {
+        background-color: $contrast; 
+        transform: scaleX(1);
+        transform-origin: center;
+      }
+    }
+
+    //focus rule when tabbing, clicking, etc. 
+    &:focus:not(:focus-visible) {
+      color: $light; 
+
+      &::after {
+        background-color: $primary;
+      }
+    }
   }
 }
 
@@ -87,7 +108,6 @@
     position: absolute; 
     inset: 0;
     background-color: $secondary; 
-    // background-image: url('https://images.pexels.com/photos/907485/pexels-photo-907485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     @include bg('https://images.pexels.com/photos/1083822/pexels-photo-1083822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     z-index: -1; 
   }
@@ -237,35 +257,34 @@
   }
 
   #nav {
-      display: inline; 
-      position: static; 
-      width: 100%; 
-      opacity: 1; 
-      height: auto;
+    display: inline; 
+    position: static; 
+    width: 100%; 
+    opacity: 1; 
+    height: auto;
 
-      ul {
-        display: inline-flex; 
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1em;
+    ul {
+      display: inline-flex; 
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1em;
 
-        float: right; 
-        width: auto; 
-        margin-top: 0em;
-        margin-right: 0.5em; 
-      }
-    
-      a {
-        display: inline-block;
-        color: lighten($secondary, 100%);
-        font-weight: 600;
-        font-size: calc(1rem + 1vw);
-        padding: 0.5em;
-        position: relative;
-      }
+      float: right; 
+      width: auto; 
+      margin-top: 0em;
+      margin-right: 0.5em; 
+    }
+  
+    a {
+      display: inline-block;
+      color: lighten($secondary, 100%);
+      font-weight: 600;
+      font-size: calc(1rem + 1vw);
+      padding: 0.5em;
+      position: relative;
 
-      a::after {
+      &::after {
         content: '';
         position: absolute; 
         bottom: 0.5em; 
@@ -278,10 +297,11 @@
         transition: transform 0.5s ease-in-out;
       }
 
-      a:hover::after {
+      &:hover::after {
         transform: scaleX(1);
         transform-origin: left;
       }
+    }
   }
 
   #divider-3 {

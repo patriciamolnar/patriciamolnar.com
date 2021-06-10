@@ -63,12 +63,21 @@ button {
     background-color: adjust-color($secondary, $alpha: -0.8);
     transform: scaleX(0); 
     transform-origin: right;
-    transition: transform 0.5s ease-in-out; 
+    transition: transform 0.2s ease-in-out; 
   }
 
   &:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+  }
+
+  &:focus {
+    color: $secondary;
+    @include fcs();
+  }
+
+  &:focus:not(:focus-visible) {
+    background-color: $primary; 
   }
 }
 
@@ -76,12 +85,24 @@ a {
   color: $primary;
   text-decoration: none;
   border-bottom: 1px solid $primary;
-  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
-}
+  transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
 
-a:hover {
-  color: $hover;
-  border-color: $hover;
+  &:hover {
+    color: $contrast;
+    border-color: $contrast;
+  }
+
+  &:focus {
+    color: $contrast; 
+    border-bottom: none;
+    outline: 2px solid $contrast;
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none; 
+    border-bottom: 1px solid $contrast;
+  }
 }
 
 ::marker {
@@ -100,21 +121,33 @@ a:hover {
   font-weight: 500;
 }
 
+
 .social-media {
   svg {
     fill: $primary; 
     display: inline; 
     width: 2.4rem; 
     height: 2.4rem;
-    transition: fill 0.5s ease-in-out; 
+    transition: fill 0.2s ease-in-out; 
+    margin-right: 0.4rem;
   }
 
   svg:hover {
-    fill: $hover; 
+    fill: $contrast; 
   }
-
+  
   a {
     border-bottom: none; 
+  
+    &:focus {
+      outline: none; 
+
+      svg {
+        fill: $contrast; 
+        box-shadow: 0 0 0 2px $secondary, 0 0 0 4px $contrast; 
+        border-radius: 50%; 
+      }
+    }
   } 
 }
 

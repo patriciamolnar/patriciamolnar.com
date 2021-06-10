@@ -18,6 +18,14 @@
   margin-right: 0.5em;
   width: 2em;
   height: 2em;
+
+  &:focus {
+    @include fcs(); 
+  }
+
+  &:focus:not(:focus-visible) {
+    background-color: $primary;
+  }
 }
 
 .certificates__lang {

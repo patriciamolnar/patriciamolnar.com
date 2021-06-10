@@ -20,3 +20,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+//focus rule for buttons
+@mixin fcs($c: $contrast, $w: 2px, $o: 2px) {
+  background: $c;
+  outline: $w solid $c; 
+  outline-offset: $o;
+  transition: none; 
+}

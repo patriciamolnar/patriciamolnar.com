@@ -73,9 +73,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const h3s = document.querySelectorAll('h3');
   const gridCards = document.querySelectorAll('.grid__card'); 
   const skills = document.querySelectorAll('.skills__card');
-  const certificates = document.querySelectorAll('#certificates > p');
-  const about = document.querySelectorAll('#about > p');
-  const contact = document.querySelectorAll('#contact > p');
   const contactLink = document.querySelectorAll('#contact__link');
   
   if('IntersectionObserver' in window) {
@@ -96,14 +93,12 @@ window.addEventListener('DOMContentLoaded', () => {
     }, options);
   
     const applyObserver = arr => {
-      console.log('Arr:' + arr)
       arr.forEach(nodes => {
-        console.log(nodes);
         nodes.forEach(node => observer.observe(node))
       });
     }
 
-    applyObserver([h3s, eles, heroBtn, gridCards, skills, certificates, about, contact, contactLink]);
+    applyObserver([h3s, eles, heroBtn, gridCards, skills, contactLink]);
 
   } else { //if browser doesn't support intersection observer apply appear class
     const applyClass = arr => {
@@ -112,7 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     )}
     
-    applyClass([h3s, eles, heroBtn, gridCards, skills, certificates, about, contact, contactLink]);
+    applyClass([h3s, eles, heroBtn, gridCards, skills, contactLink]);
   }
 });
 

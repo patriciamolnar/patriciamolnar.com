@@ -12,10 +12,6 @@
 .about {
   @extend .portfolio; 
 
-  & > p {
-    @extend .transition;
-  }
-
   .youtube-link {
     margin-top: 3em;
   }

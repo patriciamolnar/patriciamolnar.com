@@ -54,22 +54,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }); 
 
   // intersection observer 
-  const options = {
-    threshold: 0, 
-    rootMargin: '0px 0px -100px 0px'
-  }; 
-
-  const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-          if(!entry.isIntersecting) {
-            return;
-          } else {
-            entry.target.classList.add('appear');
-            observer.unobserve(entry.target); 
-          }
-      })
-  }, options);
-
   
   //add delay to transition
   const addDelay = (eles) => {
@@ -82,37 +66,53 @@ window.addEventListener('DOMContentLoaded', () => {
     } 
   }
 
-  //Headlines
-  const h3s = document.querySelectorAll('h3');
-  h3s.forEach(ele => observer.observe(ele));
-
-  //Hero Section
+  // Selecting Elements for Intersection Observer
   const eles = document.querySelectorAll('.transition'); 
-  addDelay(eles);
-  eles.forEach(ele => observer.observe(ele));
-
-  const heroBtn = document.querySelector('.hero__text a');
-  observer.observe(heroBtn);
-
-  //Portfolio & About
+  addDelay(eles); //adding transition-delay so they come in after each other.
+  const heroBtn = document.querySelectorAll('.hero__text a');
+  const h3s = document.querySelectorAll('h3');
   const gridCards = document.querySelectorAll('.grid__card'); 
-  gridCards.forEach(ele => observer.observe(ele));
-
-  //Skills  
   const skills = document.querySelectorAll('.skills__card');
-  skills.forEach(ele => observer.observe(ele));
-
-  //Certificates
   const certificates = document.querySelectorAll('#certificates > p');
-  certificates.forEach(ele => observer.observe(ele));
-
   const about = document.querySelectorAll('#about > p');
-  about.forEach(ele => observer.observe(ele));
-
   const contact = document.querySelectorAll('#contact > p');
-  contact.forEach(ele => observer.observe(ele));
+  const contactLink = document.querySelectorAll('#contact__link');
+  
+  if('IntersectionObserver' in window) {
+    const options = {
+      threshold: 0, 
+      rootMargin: '0px 0px -100px 0px'
+    }; 
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) {
+              return;
+            } else {
+              entry.target.classList.add('appear');
+              observer.unobserve(entry.target); 
+            }
+        })
+    }, options);
+  
+    const applyObserver = arr => {
+      console.log('Arr:' + arr)
+      arr.forEach(nodes => {
+        console.log(nodes);
+        nodes.forEach(node => observer.observe(node))
+      });
+    }
 
-  const contactLink = document.querySelector('#contact__link');
-  observer.observe(contactLink);
+    applyObserver([h3s, eles, heroBtn, gridCards, skills, certificates, about, contact, contactLink]);
 
+  } else { //if browser doesn't support intersection observer apply appear class
+    const applyClass = arr => {
+      arr.foreach(nodes => {
+        nodes.forEach(node => node.classList.add('appear'));
+      }
+    )}
+    
+    applyClass([h3s, eles, heroBtn, gridCards, skills, certificates, about, contact, contactLink]);
+  }
 });
+

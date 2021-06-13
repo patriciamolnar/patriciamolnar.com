@@ -53,6 +53,16 @@ window.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', (e) => toggleVisibility(e))
   }); 
 
+  //open with enter key (for keyboard users)
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        toggleVisibility(e); 
+      }
+    });
+  }); 
+
+
   // intersection observer 
   
   //add delay to transition

@@ -21,6 +21,7 @@
   border-bottom: none;
 
   position: fixed; 
+  z-index: 1; 
   right: -3.5em; 
   bottom: 1em; 
   transition: right 0.6s ease-in-out;

@@ -6,10 +6,16 @@
 }
 
 #burger {
+  background-color: transparent;
+  border: none; 
   display: inline-block;  
   position: relative; 
   padding: 0.5em;
   z-index: 2;
+
+  &:focus {
+    @include fcs(); 
+  }
 
   .bar1, .bar2, .bar3 {
     width: 2.5rem;

@@ -14,8 +14,9 @@
       <% data.about.forEach(video => { %>
         <div class="grid__card">
           <div class="grid__video">
-            <iframe width="100%" height="100%" src=<%= video.youtube_url %> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="100%" loading="lazy" src=<%= video.youtube_url %> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
+
           <div class="grid__copy">
             <div>
               <h4 class="grid__title"><%= video.title %></h4>
@@ -29,7 +30,7 @@
         </div>
       <% }); %>
     </div>
-    <p>
+    <p class="youtube-link">
       View more on YouTube: <a href="https://www.youtube.com/channel/UCnTVj2blZd_9_xpbo2t7ARw" target="_blank">Visit my channel</a>.
     </p>
     

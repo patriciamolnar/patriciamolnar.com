@@ -24,6 +24,14 @@ footer {
       align-items: center;
     }
   }
+
+  & > div:nth-of-type(2) {
+    text-align: center;
+
+    a {
+      box-shadow: $shadow; 
+    }
+  }
 }
 
 @media screen and (min-width: 50em) {

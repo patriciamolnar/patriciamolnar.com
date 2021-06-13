@@ -28,12 +28,21 @@ window.addEventListener('DOMContentLoaded', () => {
       });
   }
   
-
   //when there is a click on one of the links, close the navigation (on mobile)
   lis.forEach(li => li.addEventListener('click', function() {
       burger.classList.remove('change');
       nav.classList.remove('show');
-  }));
+  }), false);
+
+  const lastLi = document.querySelector('#nav li:last-child'); 
+
+  lastLi.addEventListener('keydown', function(e) {
+    if (e.key === 'Tab') {
+      console.log(e.target);
+      burger.classList.remove('change');
+      nav.classList.remove('show');
+    }
+  }, false);
 
 
   //expand certificates
@@ -50,7 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   const toggleBtns = document.querySelectorAll('.certificates__toggle');
   toggleBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => toggleVisibility(e))
+      btn.addEventListener('click', (e) => toggleVisibility(e), false)
   }); 
 
   //open with enter key (for keyboard users)
@@ -59,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Enter') {
         toggleVisibility(e); 
       }
-    });
+    }, false);
   }); 
 
 

@@ -9,8 +9,20 @@
   <div class="certificates__grid">
     <% for(let language in data.certificates) { %>
       <div>
-        <button class="certificates__toggle">+</button><span class="certificates__lang"><%= language %></span>
-        <ul class="certificates__list">
+        <button 
+          class="certificates__toggle" 
+          aria-expanded="false" 
+          aria-controls=<%= language.replace(/[\s&\.]/mg, '') %>
+          id="<%= language.replace(/[\s&\.]/mg, '') %>-button"
+        >+</button>
+        <span class="certificates__lang"><%= language %></span>
+        
+        <ul 
+          class="certificates__list" 
+          id="<%= language.replace(/[\s&\.]/mg, '') %>" 
+          role="region" 
+          aria-labelledby="<%= language.replace(/[\s&\.]/mg, '') %>-button"
+        >
           <% data.certificates[language].forEach(certificate => { %>
             <li><%= certificate[1]  %> <span class="certificates__provider"><%= certificate[0]  %></span></li>
           <% }); %><%# end forEach %> 

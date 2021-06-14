@@ -52,9 +52,11 @@ window.addEventListener('DOMContentLoaded', () => {
     if(parent.classList.contains('appear')) {
         parent.classList.remove('appear');
         btn.textContent = '+'; 
+        btn.setAttribute('aria-expanded', false);
     } else {
         parent.classList.add('appear');
         btn.textContent = '-'; 
+        btn.setAttribute('aria-expanded', true);
     }
   }
   const toggleBtns = document.querySelectorAll('.certificates__toggle');

@@ -38,7 +38,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   lastLi.addEventListener('keydown', function(e) {
     if (e.key === 'Tab') {
-      console.log(e.target);
       burger.classList.remove('change');
       nav.classList.remove('show');
     }
@@ -59,19 +58,13 @@ window.addEventListener('DOMContentLoaded', () => {
         btn.setAttribute('aria-expanded', true);
     }
   }
+
   const toggleBtns = document.querySelectorAll('.certificates__toggle');
   toggleBtns.forEach(btn => {
       btn.addEventListener('click', (e) => toggleVisibility(e), false)
   }); 
 
-  //open with enter key (for keyboard users)
-  toggleBtns.forEach(btn => {
-    btn.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        toggleVisibility(e); 
-      }
-    }, false);
-  }); 
+
 
 
   // intersection observer 

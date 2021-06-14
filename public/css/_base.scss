@@ -7,7 +7,7 @@ body {
   line-height: 1.6; 
   font-family: $font;
   background-color: $secondary; 
-  color: lighten($secondary, 100%); 
+  color: $light; 
 }
 
 h1, h2, h3, h4 {

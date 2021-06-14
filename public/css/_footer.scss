@@ -14,7 +14,7 @@ footer {
     @include bg('../img/flowers.jpg', top left);
   
     position: absolute; 
-    inset: 0; 
+    @include inset();  
     z-index: -1;
   }
 

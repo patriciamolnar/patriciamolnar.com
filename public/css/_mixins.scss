@@ -38,3 +38,10 @@
   outline-offset: $o;
   transition: none; 
 }
+
+@mixin inset($t: 0, $b: 0, $l: 0, $r: 0) {
+  top: $t; 
+  bottom: $b; 
+  left: $l; 
+  right: $r; 
+}

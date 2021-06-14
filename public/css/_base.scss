@@ -59,7 +59,7 @@ button {
   &::after {
     content: ''; 
     position: absolute; 
-    inset: 0 0 0 0; 
+    @include inset();  
     background-color: adjust-color($secondary, $alpha: -0.8);
     transform: scaleX(0); 
     transform-origin: right;

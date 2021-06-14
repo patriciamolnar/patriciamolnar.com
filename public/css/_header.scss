@@ -112,7 +112,7 @@
   &__background {
     margin-top: -5rem;
     position: absolute; 
-    inset: 0;
+    @include inset(); 
     background-color: $secondary; 
     @include bg('../img/flowers.jpg');
     z-index: -1; 

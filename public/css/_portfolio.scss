@@ -16,7 +16,7 @@
       box-shadow: $shadow;
       overflow-x: hidden;
       position: relative;
-      padding-bottom: 3em;
+      padding-bottom: 6em;
 
       //Intersection Observer Rules
       opacity: 0;  
@@ -49,15 +49,20 @@
     }
 
     &__copy {
-      @include pad(); 
+      @include pad(1em, 1em, 1em, 1em); 
+
+      ul {
+        padding-left: 1em; 
+      }
 
       & > div:nth-of-type(2) {
         position: absolute; 
-        bottom: 2em; 
-        left: 2em;
+        bottom: 1em; 
+        left: 1em;
+        width: calc(100% - 2em);
 
         .button {
-          margin-right: 0.5em;
+          width: inherit; 
         }
       }
     }
@@ -72,12 +77,30 @@
   }
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 46em) {
   .portfolio {
     .grid {
       display: grid; 
       grid-template-columns: repeat(2, 1fr);
       gap: 2em; 
+    }
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .portfolio {
+    .grid {
+      &__card {
+        padding-bottom: 3em;
+      }
+
+      &__copy {
+        & > div:nth-of-type(2) {
+          display: flex; 
+          justify-content: space-between;
+          gap: 0.7em;
+        }
+      }
     }
   }
 }

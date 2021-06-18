@@ -1,15 +1,14 @@
-footer {
-  @extend .social-media; 
-  @include pad(); 
-  
+.footer {
   font-size: 1.2rem;
-  padding-top: 4em; 
-  margin-bottom: -3rem;
-  margin-top: -3em;
-
   position: relative;
+
+  &__svg {
+    width: 100%; 
+    fill: $secondary; 
+    margin-top: -1px;
+  }
   
-  .footer__bg {
+  &__bg {
     background-color: $secondary;
     @include bg('../img/flowers.jpg', top left);
   
@@ -18,14 +17,20 @@ footer {
     z-index: -1;
   }
 
-  .contact-details {
-    span {
-      display: flex; 
-      align-items: center;
+  &__copy {
+    @include pad();
+    @extend .social-media;
+
+    .contact-details {
+      span {
+        display: flex; 
+        align-items: center;
+      }
     }
   }
 
-  & > div:nth-of-type(2) {
+  &__totop {
+    @extend .social-media; 
     text-align: center;
 
     a {
@@ -35,39 +40,42 @@ footer {
 }
 
 @media screen and (min-width: 50em) {
-  footer {
-    margin-top: -5em;
-    @include pad(8em, 6em, 2em, 6em);
-
-    .social-media {
-      position: absolute; 
-      right: 6em; 
-      bottom: 2em;
+  .footer { 
+    &__copy {
+      @include pad(8em, 6em, 2em, 6em);
+  
+      .social-media {
+        position: absolute; 
+        right: 6em; 
+        bottom: 2em;
+      }
     }
   }
 }
-
 
 @media screen and (min-width: 90em) {
-  footer {
-    margin-top: -7em;
-    @include pad(12em, 10em, 4em, 10em);
-
-    .social-media {
-      right: 10em; 
-      bottom: 4em;
+  .footer { 
+    &__copy {
+      @include pad(12em, 10em, 4em, 10em);
+  
+      .social-media {
+        right: 10em; 
+        bottom: 4em;
+      }
     }
   }
 }
 
-@media screen and (min-width: 120em) {
-  footer {
-    margin-top: -7em;
-    @include pad(14em, 15em, 4em, 15em);
 
-    .social-media { 
-      right: 15em; 
-      bottom: 4em;
+@media screen and (min-width: 120em) {
+  .footer { 
+    &__copy {
+      @include pad(14em, 15em, 4em, 15em);
+  
+      .social-media {
+        right: 15em; 
+        bottom: 4em;
+      }
     }
   }
 }

@@ -5,25 +5,6 @@
   padding-left: $left;
 }
 
-@mixin divider($c: $secondary, $m: -0.5em) {
-  fill: $c; 
-  margin-bottom: $m;
-
-  @media (min-width: 50em) {
-    margin-bottom: -1.5em;
-  }
-
-  @media (min-width: 90em) {
-    margin-top: -0.5em;
-    margin-bottom: -2em;
-  }
-
-  @media (min-width: 120em) {
-    // margin-top: -1em; 
-    margin-bottom: -2.5em;
-  }
-}
-
 @mixin bg($url, $p: center) {
   background-image: url($url); 
   background-position: $p;

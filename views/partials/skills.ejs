@@ -1,20 +1,22 @@
-<svg class="divider light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 49"><polygon class="cls-1" points="500 0 500 49 255 20 119 49 0 25 0 0 500 0"/></svg>
-
 <% if(data.skills) { %> 
   <section id="skills" class="skills">
-    <h3>Skills<span class="primary">.</span></h3>
+    <svg class="divider light bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 49"><polygon class="cls-1" points="500 0 500 49 255 20 119 49 0 25 0 0 500 0"/></svg>
+
+    <div class="section--padding">
+      <h3>Skills<span class="primary">.</span></h3>
     
-    <div class="skills__grid">
-      <% for(let criteria in data.skills) { %>
-        <div class="skills__card">
-          <p class="skills__lang"><%= criteria.charAt(0).toUpperCase() + criteria.slice(1); %></p>
-          <ul class="skills__list">
-            <% data.skills[criteria].forEach(skill => { %>
-              <li><%= skill %></li> 
-            <% }); %><%# end forEach %> 
-          </ul>
-        </div>
-      <% } %><%# end for in %>
+      <div class="skills__grid">
+        <% for(let criteria in data.skills) { %>
+          <div class="skills__card">
+            <p class="skills__lang"><%= criteria.charAt(0).toUpperCase() + criteria.slice(1); %></p>
+            <ul class="skills__list">
+              <% data.skills[criteria].forEach(skill => { %>
+                <li><%= skill %></li> 
+              <% }); %><%# end forEach %> 
+            </ul>
+          </div>
+        <% } %><%# end for in %>
+      </div>
     </div>
   </section>
 <% } %><%# end if %>

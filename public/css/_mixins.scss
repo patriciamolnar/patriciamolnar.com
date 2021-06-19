@@ -1,10 +1,3 @@
-@mixin pad($top: $default, $right: $default, $bottom: $default, $left: $default) {
-  padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
-  padding-left: $left;
-}
-
 @mixin bg($url, $p: center) {
   background-image: url($url); 
   background-position: $p;

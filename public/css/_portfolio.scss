@@ -49,7 +49,7 @@
     }
 
     &__copy {
-      @include pad(1em, 1em, 1em, 1em); 
+      padding: 1em; 
 
       ul {
         padding-left: 1em; 

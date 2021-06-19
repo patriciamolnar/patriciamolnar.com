@@ -18,7 +18,7 @@
   }
 
   &__copy {
-    @include pad();
+    padding: $default; 
     @extend .social-media;
 
     .contact-details {
@@ -42,7 +42,7 @@
 @media screen and (min-width: 50em) {
   .footer { 
     &__copy {
-      @include pad(8em, 6em, 2em, 6em);
+      padding: 8em 6em $default;
   
       .social-media {
         position: absolute; 
@@ -56,7 +56,7 @@
 @media screen and (min-width: 90em) {
   .footer { 
     &__copy {
-      @include pad(12em, 10em, 4em, 10em);
+      padding: 12em 10em 4em;
   
       .social-media {
         right: 10em; 
@@ -70,7 +70,7 @@
 @media screen and (min-width: 120em) {
   .footer { 
     &__copy {
-      @include pad(14em, 15em, 4em, 15em);
+      padding: 14em 15em 4em;
   
       .social-media {
         right: 15em; 

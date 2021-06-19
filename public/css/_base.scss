@@ -7,7 +7,6 @@ body {
   line-height: 1.6; 
   font-family: $font;
   background-color: $secondary; 
-  // background-color: white;
   color: $light; 
 }
 
@@ -33,7 +32,7 @@ h4 {
 }
 
 .section--padding {
-  @include pad();
+  padding: $default; 
 }
 
 button {
@@ -194,7 +193,7 @@ a {
 
 @media screen and (min-width: 40em) {
   .section--padding {
-    @include pad(2em, 4em, 2em, 4em);
+    padding: $default 4em;
   }
 
   .divider {
@@ -210,7 +209,7 @@ a {
 
 @media screen and (min-width: 64em) {
   .section--padding {
-    @include pad(2em, 6em, 2em, 6em);
+    padding: $default 6em; 
   }
 
   .divider {
@@ -229,7 +228,7 @@ a {
     line-height: 2; 
   }
   .section--padding {
-    @include pad(3em, 10em, 3em, 10em);
+    padding: 3em 6em;
   }
 
   .divider {
@@ -249,7 +248,7 @@ a {
   }
 
   .section--padding {
-    @include pad(5em, 15em, 4em, 15em);
+    padding: 5em 15em 4em; 
   }
 
   .divider {

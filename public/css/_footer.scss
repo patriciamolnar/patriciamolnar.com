@@ -39,6 +39,14 @@
   }
 }
 
+@media screen and (min-width: 40em) {
+  .footer {
+    &__copy {
+      padding: $default 4em; 
+    }
+  }
+}
+
 @media screen and (min-width: 50em) {
   .footer { 
     &__copy {

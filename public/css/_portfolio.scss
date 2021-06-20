@@ -18,6 +18,10 @@
       position: relative;
       padding-bottom: 6em;
 
+      &.grid__card--last {
+        padding-bottom: 0; 
+      }
+
       //Intersection Observer Rules
       opacity: 0;  
       transition: opacity 1s ease-out, transform 1s ease-out; 
@@ -76,6 +80,66 @@
     }
   }
 }
+
+.grid__card--last {
+  display: flex; 
+  flex-direction: column;
+
+  .static {
+    flex-grow: 1;
+    display: flex; 
+    flex-direction: column; 
+  
+    & > div {
+      position: relative; 
+      flex: 1;  
+      min-height: 150px; 
+    }
+  
+    .background {
+      position: absolute; 
+      @include inset();
+      z-index: -1; 
+    }
+  
+    &__copy {
+      text-align: center; 
+  
+      p {
+        font-weight: bold; 
+        font-size: 2rem;
+        margin-top: 3.5rem;  
+        text-shadow: 0 0 3px change-color($color: $secondary, $alpha: 0.5)      
+      }
+  
+      a {
+        @extend .button;
+        margin-top: 0; 
+        margin-bottom: 0; 
+      }
+    }
+  
+    &__wedding {
+      .background {
+        @include bg('../img/wedding.png');
+      }
+    }
+  
+    &__travel { 
+      .background {
+        @include bg('../img/mountains.png');
+      }
+    }
+  
+    &__charity {
+      .background {
+        @include bg('../img/budapest.png');
+      }
+    }
+  }
+}
+
+
 
 @media screen and (min-width: 46em) {
   .portfolio {

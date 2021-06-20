@@ -1,7 +1,7 @@
 {
   "portfolio": [
     {
-      "video_url": "https://www.youtube.com/embed/lNvBbh5jDcA",
+      "video_url": "https://www.youtube.com/embed/f-c9Y9xqDYI",
       "title": "French Learning App",
       "stack": "React, Node, Express & MongoDB",
       "purpose": "To help people studying French learn the different conjugation forms of most common French words.",
@@ -13,10 +13,23 @@
         "Password reset system for users who forget their login"
       ], 
       "github_url": "https://github.com/patriciamolnar/conjugateau",
-      "live_url": "#"
+      "live_url": "https://conjugateau.herokuapp.com/"
     }, 
     {
-      "video_url": "https://www.youtube.com/embed/lNvBbh5jDcA",
+      "video_url": "https://www.youtube.com/embed/nB5ZnqbBRiw",
+      "title": "Police Stop & Search Checker",
+      "stack": "jQuery, Sass",
+      "purpose": "Check how many stop and searches police conducted in your area and see what their reasons and results were",
+      "features": [
+        "Based on your UK postcode, see how many stop and searches were conducted in your area",
+        "Uses map.js to chart data on a graph",
+        "Internet Explorer compatible"
+      ], 
+      "github_url": "https://github.com/patriciamolnar/police",
+      "live_url": "https://patriciamolnar.github.io/police/"
+    },
+    {
+      "video_url": "https://www.youtube.com/embed/-vTyqroaLso",
       "title": "Asteroid Tracker",
       "stack": "Node, Express for backend, Vanilla JavaScript, CSS and HTML for frontend",
       "purpose": "See how many Nearth Earth Objects (NEOs) are orbiting the Earth.",
@@ -26,7 +39,7 @@
         "Custom error message illustrations, e.g. if there are no NEOs or user input incorrect date format"
       ], 
       "github_url": "https://github.com/patriciamolnar/nasa-api",
-      "live_url": "http://pm-nasa-api.herokuapp.com/"
+      "live_url": "https://pm-nasa-api.herokuapp.com/"
     }
   ], 
   "skills": {
@@ -75,20 +88,6 @@
       "description": "This video shoes how to create the Frosted Glass effect, also known as Glassmorphism, with CSS.",
       "demo_url": "https://codepen.io/patriciamolnar/full/gOweaxa",
       "code_url": "https://github.com/patriciamolnar/glassmorphism"
-    },
-    {
-      "youtube_url": "https://youtube.com/embed/B7laJa9KUaI", 
-      "title": "Create Animated Underlines with the Intersection Observer API",
-      "description": "Animations are a great way to enhance your website. In this video, I explain how to use the JavaScript Intersection API to add animated underlines to your website when the user scrolls down the page.",
-      "demo_url": "https://codepen.io/patriciamolnar/full/LYZgJPE",
-      "code_url": "https://github.com/patriciamolnar/animated-underline-intersection-observer"
-    }, 
-    {
-      "youtube_url": "https://youtube.com/embed/-S21wVY07AY", 
-      "title": "Transitioning CSS gradients",
-      "description": "You can create gradients easily with the background-image: linear-gradient() property. This can however not be transitioned. This tutorial explains how you can nonetheless create buttons and links that have a transitioning gradient.",
-      "demo_url": "https://codepen.io/patriciamolnar/full/mdrQjwW",
-      "code_url": "https://github.com/patriciamolnar/css-gradient-transitions"
     }
   ], 
   "certificates": {

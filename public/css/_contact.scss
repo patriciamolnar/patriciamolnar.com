@@ -67,7 +67,23 @@
 }
 
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 40em) {
+  #contact {
+    .section--padding {
+      padding-top: 4em;
+    }
+  }
+}
+
+@media screen and (min-width: 80em) {
+  #contact {
+    .section--padding {
+      padding-top: 6em;
+    }
+  }
+}
+
+@media screen and (min-width: 120em) {
   #contact {
     .section--padding {
       padding-top: 8em;

@@ -4,13 +4,17 @@
       "video_url": "https://www.youtube.com/embed/f-c9Y9xqDYI",
       "title": "French Learning App",
       "stack": "React, Node, Express & MongoDB",
-      "purpose": "To help people studying French learn the different conjugation forms of most common French words.",
+      "purpose": "To help French learners study the different conjugation forms of the most common French verbs.",
       "features": [
-        "Let's users practice French verb forms with flashcards and tests",
-        "Users can create an account and bookmark difficult words",
-        "List of all the forms for each verb",
-        "Users can change their email address, password or delete their account under settings",
-        "Password reset system for users who forget their login"
+        "Let's users practice conjugating Frech verbs with Flashcards and Tests",
+        "Users can select one or more tenses to practice",
+        "Users can create an account to bookmark difficult words",
+        "Registered users can practice their bookmarked verbs separately",
+        "Includes conjugation table for each verb",
+        "Users can search for the conjugation of a verb by its infinitive form",
+        "Users can change their email address, password and they can delete their account",
+        "Includes a password reset system for those, who forget their password", 
+        "Uses a self-made API"
       ], 
       "github_url": "https://github.com/patriciamolnar/conjugateau",
       "live_url": "https://conjugateau.herokuapp.com/"
@@ -19,11 +23,15 @@
       "video_url": "https://www.youtube.com/embed/nB5ZnqbBRiw",
       "title": "Police Stop & Search Checker",
       "stack": "jQuery, Sass",
-      "purpose": "Check how many stop and searches police conducted in your area and see what their reasons and results were",
+      "purpose": "Check how many stop and searches police conducted in your area and why people were searched",
       "features": [
-        "Based on your UK postcode, see how many stop and searches were conducted in your area",
-        "Uses map.js to chart data on a graph",
-        "Internet Explorer compatible"
+        "Users can check stop and search data based on their UK postcode",
+        "Users can check data for various months and years",
+        "Shows the total number of searches and how many resulted in an arrest",
+        "Gives more information about the reasons for the stop and search",
+        "Uses map.js to visualise data on a graph",
+        "Internet Explorer compatible", 
+        "Uses Postcodes.io API to convert your postcode into coordinates"
       ], 
       "github_url": "https://github.com/patriciamolnar/police",
       "live_url": "https://patriciamolnar.github.io/police/"
@@ -31,12 +39,14 @@
     {
       "video_url": "https://www.youtube.com/embed/-vTyqroaLso",
       "title": "Asteroid Tracker",
-      "stack": "Node, Express for backend, Vanilla JavaScript, CSS and HTML for frontend",
-      "purpose": "See how many Nearth Earth Objects (NEOs) are orbiting the Earth.",
+      "stack": "Node & Express (backend), JavaScript, CSS and HTML (frontend)",
+      "purpose": "See how many Asteroids there are in the vicinity of our Earth.",
       "features": [
-        "Let's users check the number of NEOs for a specified day",
-        "Provides more information about the NEO, e.g. size, speed and whether it is potentially dangerous",
-        "Custom error message illustrations, e.g. if there are no NEOs or user input incorrect date format"
+        "Let's users check the number of near earth Asteroids for a specified day",
+        "Provides more information about the Asteroid, e.g. its size, speed and whether it could potentially be hazardous to us",
+        "Includes NASA's Astronomy Picture of the Day",
+        "Includes custom error messages featuring drawings of dinosaurs",
+        "Uses NASA's Asteroids NeoWs API and APOD API"
       ], 
       "github_url": "https://github.com/patriciamolnar/nasa-api",
       "live_url": "https://pm-nasa-api.herokuapp.com/"
@@ -69,9 +79,11 @@
       "npm"
     ],
     "non-coding": [
-      "Project management",
+      "Project Management",
       "Leadership",
-      "Copywriting"
+      "Copywriting", 
+      "Video & Audio Editing", 
+      "Teaching & Tutoring"
     ]
   }, 
   "about": [

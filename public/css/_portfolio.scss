@@ -104,18 +104,23 @@
   
     &__copy {
       text-align: center; 
+      padding: 1em 0.5em 0.5em;
   
       p {
         font-weight: bold; 
-        font-size: 2rem;
-        margin-top: 3.5rem;  
+        margin: 0 0 5px; 
+        font-size: 2rem;   
         text-shadow: 0 0 3px change-color($color: $secondary, $alpha: 0.5)      
       }
   
       a {
         @extend .button;
-        margin-top: 0; 
-        margin-bottom: 0; 
+        display: block; 
+        margin: 5px;  
+
+        &:focus:not(:focus-visible) {
+          outline: none;  
+        }
       }
     }
   
@@ -133,7 +138,13 @@
   
     &__charity {
       .background {
-        @include bg('../img/budapest.png');
+        @include bg('../img/night.png');
+      }
+
+      span {
+        font-size: 1.3rem;
+        display: block; 
+        margin-top: 0.5rem;
       }
     }
   }
@@ -160,9 +171,26 @@
 
       &__copy {
         & > div:nth-of-type(2) {
+          width: auto; 
           display: flex; 
-          justify-content: space-between;
+          justify-content: flex-start;
           gap: 0.7em;
+
+          .button {
+            width: auto;
+          }
+        }
+      }
+
+      .static {
+        &__copy {
+          position: relative; 
+          top: 40%; 
+          transform: translateY(-50%);
+        }
+
+        a {
+          display: inline-block; 
         }
       }
     }

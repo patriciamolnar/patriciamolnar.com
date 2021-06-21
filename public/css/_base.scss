@@ -78,6 +78,7 @@ button {
 
   &:focus:not(:focus-visible) {
     background-color: $primary; 
+    border-bottom: none; 
   }
 }
 
